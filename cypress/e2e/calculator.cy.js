@@ -82,12 +82,11 @@ describe("Calculator", () => {
     cy.get('#number0').click();
     cy.get('#operator-multiply').click();
     cy.get('#number2').click();
-    
     cy.get('#operator-equals').click();
     cy.get('.display').should('contain', '1000000000000')
   })
 
-  it('should display expected output when dividing by 0', () => {
+  it('should display output of 0 when dividing by 0', () => {
     cy.get('#number2').click();
     cy.get('#operator-divide').click();
     cy.get('#number0').click();
